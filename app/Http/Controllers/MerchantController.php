@@ -46,16 +46,16 @@ class MerchantController extends Controller
         $merchant = Merchant::create($request -> validated());
 
         if(!empty($request['branches'])){
-            $additionalBranches = [];
-            foreach($request['branches'] as $item){
-                $additionalBranches[] = new Branch(['location' => $item ]);
-            }
+            $additionalBranches = array_map( function($branch) {
+                return new Branch(['location' => $branch ]);
+            }, $request['branches']);
 
             $merchant->branches()->saveMany($additionalBranches);
         }
 
         return redirect()->route('merchant.index')->with('success', 'Item created');
     }
+
 
     /**
      * Display the specified resource.

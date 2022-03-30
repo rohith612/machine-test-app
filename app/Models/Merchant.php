@@ -20,6 +20,6 @@ class Merchant extends Eloquent
 
     public function branches()
     {
-       return $this->hasMany('App\Models\Branch', 'merchant_id', 'id');
+       return $this->hasMany('App\Models\Branch', 'merchant_id', 'id')->latest();
     }
 }
