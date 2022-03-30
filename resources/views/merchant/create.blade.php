@@ -50,8 +50,6 @@
 
                 </div> 
 
-
-
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <a href="{{ route('merchant.index') }}" class="btn btn-link">Back</a>
 
@@ -63,15 +61,24 @@
 
 </div>
 
-
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
       $(document).ready(function() {
+          addRows();
+
           $(".add-row").click(function() {
-              var markup = "<tr><td><input type='checkbox' name='record'></td><td><input type='text' name='branches[]' class='form-control' required /></td></tr>";
-              $("table tbody").append(markup);
+            let checkEmpty = true; 
+            $('input[name="branches[]"]').each(function() {
+                if ($(this).val() == "") {
+                    checkEmpty = false;
+                    return checkEmpty;
+                }
+            });
+            if(checkEmpty){
+                addRows();
+            }else{
+                alert('Please fill the branch location')
+            }
           });
 
           $(".delete-row").click(function() {
@@ -81,6 +88,11 @@
                   }
               });
           });
+
+          function addRows(){
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td><input type='text' name='branches[]' class='form-control branch-name' required /></td></tr>";
+              $("table tbody").append(markup);
+          }
       });
   </script>
 @endsection
