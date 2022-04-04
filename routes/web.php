@@ -12,7 +12,7 @@ use App\Http\Controllers\MerchantController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// adding new comment to route page
 Route::get('/', function () {
     return view('welcome');
 });
