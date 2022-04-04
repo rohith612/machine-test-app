@@ -23,8 +23,5 @@ Artisan::command('inspire', function () {
 /**
  * this is the test file editing
  * need to switch branch in btw main 
-<<<<<<< HEAD
+ * my branch is main
  */
-=======
- */
->>>>>>> test-branch
