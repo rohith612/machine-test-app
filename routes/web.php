@@ -21,6 +21,7 @@ Route::resource('merchant', MerchantController::class, ['names' => 'merchant', ]
     'index', 'create', 'store'
 ]);
 // test branch
+// test new
 // Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsum sunt maxime hic impedit perferendis distinctio nesciunt, et laborum facere tempora delectus ea quasi assumenda dolor voluptatem. Nihil, fugit perferendis.
 // Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
