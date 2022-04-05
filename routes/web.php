@@ -32,3 +32,5 @@ Route::resource('merchant', MerchantController::class, ['names' => 'merchant', ]
 // Log::critical("message");
 // Log::critical("message");
 // Log::critical("message");
+
+// my bug changes
