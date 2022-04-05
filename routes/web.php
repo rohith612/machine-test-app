@@ -25,3 +25,10 @@ Route::resource('merchant', MerchantController::class, ['names' => 'merchant', ]
 // Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
 // Log::critical("message");
+// Log::critical("message");
+// Log::critical("message");
+// Log::critical("message");
+// Log::critical("message");
+// Log::critical("message");
+// Log::critical("message");
+// Log::critical("message");
