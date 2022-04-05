@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::resource('merchant', MerchantController::class, ['names' => 'merchant', ])->only([
     'index', 'create', 'store'
 ]);
+// my test comment in the branch
